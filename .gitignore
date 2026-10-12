@@ -2,3 +2,10 @@ jo_description/worlds/models/
 jo_description/worlds/industrial.sdf
 jo_description/worlds/vao.sdf
 .vscode/
+
+# GLIM map dumps (large)
+maps/*
+!maps/.gitkeep
+
+# Rosbag binary data
+bags/**/*.mcap

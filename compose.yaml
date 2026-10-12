@@ -25,6 +25,9 @@ services:
       - ./jo_description:/home/ros/src/jo_description
       - ./jo_navigation:/home/ros/src/jo_navigation
       - ./jo_sim:/home/ros/src/jo_sim
+      - ./bags:/home/ros/bags:ro
+      - ./maps:/home/ros/maps
+      - ./docker/utilities.sh:/etc/utilities.sh:ro
     environment:
       - DISPLAY=${DISPLAY}
       - NVIDIA_VISIBLE_DEVICES=all

@@ -9,7 +9,7 @@ RUN apt update -y \
     libxcb-cursor0 \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN pip install --break-system-packages ruamel.yaml PyQt6 
+RUN pip install --break-system-packages ruamel.yaml PyQt6 ultralytics 
 
 RUN apt update -y \
     && apt install -y ros-${DISTRO}-plotjuggler \
@@ -94,9 +94,9 @@ RUN cd /home/ros/RGLGazeboPlugin \
     && cmake .. \
     && make -j \
     && make install \
-    && cd .. 
-    # && export IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/ros/RGLGazeboPlugin/install/RGLServerPlugin:$IGN_GAZEBO_SYSTEM_PLUGIN_PATH \ 
-    # && export IGN_GUI_PLUGIN_PATH=/home/ros/RGLGazeboPlugin/install/RGLVisualize:$IGN_GUI_PLUGIN_PATH
+    && cd .. \
+    && export IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/ros/RGLGazeboPlugin/install/RGLServerPlugin:$IGN_GAZEBO_SYSTEM_PLUGIN_PATH \ 
+    && export IGN_GUI_PLUGIN_PATH=/home/ros/RGLGazeboPlugin/install/RGLVisualize:$IGN_GUI_PLUGIN_PATH
 
 
 

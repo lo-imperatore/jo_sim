@@ -57,6 +57,6 @@
     // Topics
     "imu_topic": "/imu/data",
     "points_topic": "/velodyne_points",
-    "image_topic": "/camera1/rs1/color/image_raw"
+    "image_topic": "/front_camera/camera/color/image_raw"
   }
 }

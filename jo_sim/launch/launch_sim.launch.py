@@ -59,19 +59,19 @@ def generate_launch_description():
                 )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true'}.items()
     )
     
-    default_world = os.path.join(
-        get_package_share_directory(package_name),
-        'worlds',
-        'external',
-        'worlds',
-        'office_cpr.world'
-        ) 
-
     # default_world = os.path.join(
     #     get_package_share_directory(package_name),
     #     'worlds',
-    #     'obstacles.sdf'
-    #     )  
+    #     'external',
+    #     'worlds',
+    #     'yosemite.world'
+    #     ) 
+
+    default_world = os.path.join(
+        get_package_share_directory(package_name),
+        'worlds',
+        'obstacles.sdf'
+        )  
     
     world = LaunchConfiguration('world')
 
@@ -93,7 +93,7 @@ def generate_launch_description():
                                    '-name', 'jo',
                                    '-x', '0.0',
                                    '-y', '0.0',
-                                   '-z', '1.7'],
+                                   '-z', '4.7'],
                         output='screen')
 
 

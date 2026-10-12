@@ -10,3 +10,11 @@ alias navigation='ros2 launch jo_navigation navigation_local.launch.py rviz:=tru
 alias navigation_gps='ros2 launch jo_navigation navigation_gps.launch.py rviz:=true use_sim_time:=true'
 
 alias sim='ros2 launch jo_sim launch_sim.launch.py glim:=true'
+
+# Real-robot bag → GLIM map reconstruction (campo_ippodromo by default)
+# Map dump is written under /home/ros/maps when GLIM exits (Ctrl-C or bag end).
+alias bag_glim='ros2 launch jo_sim launch_bag_glim.launch.py'
+alias bag_glim_yolo='ros2 launch jo_sim launch_bag_glim.launch.py yolo:=true rviz:=true'
+
+# Inspect / export a saved dump with the offline viewer
+alias glim_view='ros2 run glim_ros offline_viewer'
